@@ -93,6 +93,10 @@ Endpoint 6: /movies/id?id=1
 			    "totalTickets": 220
 			}
 			
+			
+-----------------------------------------------------------------------------------------------------
+
+
 Post Methods
 
 Endpoint 1: /users
@@ -110,9 +114,13 @@ Endpoint 1: /users
 			Sample Response
 			User addition Failed please check for errors
 			
+			
+			
+-----------------------------------------------------------------------------------------------------
+			
 Put Methods
 
-Enfpoint 1: /users
+Endpoint 1: /users
 			/users?username=test&password=test&role=user&userID=10
 			Parameters : 	username : string
 							password : String
@@ -126,3 +134,41 @@ Enfpoint 1: /users
 			
 			Sample Response
 			User Updation Failed please check for errors
+			
+Endpoint 2: /movies
+			/movies/?movieID=12&name=Beast&ticket_price=200&available_tickets=20&total_tickets=500
+			Parameters : movieID : int
+						 name : String
+						 ticket_price : int
+						 available_tickets : int
+						 total_tickets : int
+						 
+			Will give you 2 messages if it's successful or not
+			
+			Sample Response
+			Movie Updated Successfully
+			
+			Sample Response
+			Movie Updation Failed please check for errors
+			
+			
+-----------------------------------------------------------------------------------------------------
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

@@ -25,4 +25,15 @@ public class MovieServiceImpl implements MovieService {
 		return movieRepository.getMovieByID(id);
 	}
 
+	@Override
+	public void addMovie(int movieID, String name, int ticketPrice, int availableTickets, int totalTickets) {
+		movieRepository.addMovie(movieID,name,ticketPrice,availableTickets,totalTickets);
+		
+	}
+
+	@Override
+	public void updateMovie(int movieID, String name, int ticketPrice, int availableTickets, int totalTickets) {
+		movieRepository.updateMovie(movieID,name,ticketPrice,availableTickets,totalTickets);
+	}
+
 }

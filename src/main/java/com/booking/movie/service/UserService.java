@@ -3,7 +3,6 @@ package com.booking.movie.service;
 import java.util.List;
 
 import com.booking.movie.model.User;
-import com.google.gson.JsonElement;
 
 public interface UserService {
 

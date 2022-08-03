@@ -11,5 +11,9 @@ public interface MovieService {
 	
 	Movie getMovieByID(Integer id);
 
+	void addMovie(int movieID, String name, int ticketPrice, int availableTickets, int totalTickets);
+
+	void updateMovie(int movieID, String name, int ticketPrice, int availableTickets, int totalTickets);
+
 	
 }

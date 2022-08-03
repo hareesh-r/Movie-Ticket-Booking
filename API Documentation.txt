@@ -1,0 +1,128 @@
+BASE_URL = http://localhost:8080
+
+Get Methods
+
+Endpoint 1: /users
+			will give you a JSON with data of all the users
+			
+			Parameters : none
+			
+			Sample Response
+			[
+			    {
+			        "userID": 1,
+			        "username": "Hareesh",
+			        "password": "passwordhash",
+			        "role": "user"
+			    },
+			    {
+			        "userID": 2,
+			        "username": "Vipin",
+			        "password": "summapass",
+			        "role": "user"
+			    }
+			]
+			
+			
+Endpoint 2: /users/id?id=1
+			will give you a JSON Object of the user with the given id {1}
+			
+			Parameter : id : int
+			
+			Sample Response
+			{
+			    "userID": 1,
+			    "username": "Hareesh",
+			    "password": "passwordhash",
+			    "role": "user"
+			}
+			
+			Sample Response when the user not found
+			null
+			
+Endpoint 3: users/login
+			users/login?username=Hareesh&password=passwordhash
+			
+			Parameters : username : string
+						 password : String
+					
+			Sample Response
+			{
+			    "userID": 1,
+			    "username": "Hareesh",
+			    "password": "passwordhash",
+			    "role": "user"
+			}
+			
+			Sample Response
+			" "
+			
+			
+Endpoint 5: /movies
+			Parameters : none
+			
+			Sample Response
+			[
+			    {
+			        "movieID": 1,
+			        "name": "Legend",
+			        "ticketPrice": 120,
+			        "availableTickets": 200,
+			        "totalTickets": 220
+			    },
+			    {
+			        "movieID": 2,
+			        "name": "Iravin Nizhal",
+			        "ticketPrice": 120,
+			        "availableTickets": 100,
+			        "totalTickets": 130
+			    }
+			]
+			
+Endpoint 6: /movies/id?id=1
+			Gives you a Movie detail as a JSON Object with the given id {i}
+			
+			Parameter : id: int
+			
+			Sample Response
+			{
+			    "movieID": 1,
+			    "name": "Legend",
+			    "ticketPrice": 120,
+			    "availableTickets": 200,
+			    "totalTickets": 220
+			}
+			
+Post Methods
+
+Endpoint 1: /users
+			/users?username=test&password=test&role=user&userID=10
+			Parameters : 	username : string
+							password : String
+							role : String
+							userID : int
+
+			Will give you 2 messages if it's successful or not
+			
+			Sample Response
+			User Added Successfully
+			
+			Sample Response
+			User addition Failed please check for errors
+			
+Put Methods
+
+Enfpoint 1: /users
+			/users?username=test&password=test&role=user&userID=10
+			Parameters : 	username : string
+							password : String
+							role : String
+							userID : int
+			
+			Will give you 2 messages if it's successful or not
+			
+			Sample Response
+			User Updated Successfully
+			
+			Sample Response
+			User Updation Failed please check for errors

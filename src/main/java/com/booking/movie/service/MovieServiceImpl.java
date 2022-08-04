@@ -36,4 +36,5 @@ public class MovieServiceImpl implements MovieService {
 		movieRepository.updateMovie(movieID,name,ticketPrice,availableTickets,totalTickets);
 	}
 
+
 }

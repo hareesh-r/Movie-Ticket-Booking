@@ -25,6 +25,8 @@ public class MovieController {
 		return gson.toJson(movieService.getAllMovies());
 	}
 
+	
+	
 	@RequestMapping(value = "/movies/id", produces = "application/json", method = RequestMethod.GET)
 	@ResponseBody
 	public String getMovieByID(@RequestParam String id) {

@@ -13,7 +13,7 @@ public interface MovieRepository extends JpaRepository<Movie, Integer> {
 
 	@Query(value = "SELECT * FROM Movies WHERE movieID = :id", nativeQuery = true)
 	Movie getMovieByID(@Param("id") Integer id);
-
+	
 	
 	@Modifying
 	@Transactional

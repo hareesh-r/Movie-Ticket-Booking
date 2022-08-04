@@ -93,6 +93,22 @@ Endpoint 6: /movies/id?id=1
 			    "totalTickets": 220
 			}
 			
+Endpoint 7: /tickets
+			Gives you the whole ticket list as a Json Array
+			
+			Parameter : None
+			
+			Sample Response
+			[
+			    {
+			        "ticketID": 1,
+			        "movieID": 1,
+			        "userID": 1,
+			        "noOfTickets": 5,
+			        "timestamp": "2022-08-03 17:19:30"
+			    }
+			]
+			
 			
 -----------------------------------------------------------------------------------------------------
 
@@ -114,8 +130,39 @@ Endpoint 1: /users
 			Sample Response
 			User addition Failed please check for errors
 			
+
+Endpoint 2: /movies
+			/movies?name=movieName&movieID=10&ticketPrice=120&availableTickets=30&totalTickets=300
+			Parameters : 	name : string
+							movieID : int
+							ticketPrice : int
+							availableTickets : int
+							totalTickets : int
+
+			Will give you 2 messages if it's successful or not
 			
+			Sample Response
+			Movie Added Successfully
 			
+			Sample Response
+			Movie addition Failed please check for errors	
+			
+					
+Endpoint 3: /bookTickets												
+			/bookTickets?userID=1&movieID=2&no_of_tickets=4&ticketID=1		
+			Parameters :    userID : int							
+							movieID : int							
+							no_of_tickets : int						
+																	
+			Will give you 2 messages if it's successful or not		
+																	
+			Sample Response											
+			Ticket Booking Successfully								
+																	
+			Sample Response											
+			Ticket Booking Failed please check for errors	
+			
+								
 -----------------------------------------------------------------------------------------------------
 			
 Put Methods

@@ -25,6 +25,17 @@ public class Movie {
 	
 	@Column(name = "total_tickets")
 	private int totalTickets;
+	
+	@Column(name="revenue")
+	private int revenue;
+
+	public int getRevenue() {
+		return revenue;
+	}
+
+	public void setRevenue(int revenue) {
+		this.revenue = revenue;
+	}
 
 	public int getMovieID() {
 		return movieID;
@@ -66,27 +77,26 @@ public class Movie {
 		this.totalTickets = totalTickets;
 	}
 
-	public Movie(int movieID, String name, int ticketPrice, int availableTickets, int totalTickets) {
+
+	public Movie() {
+		super();
+	}
+
+	public Movie(int movieID, String name, int ticketPrice, int availableTickets, int totalTickets, int revenue) {
 		super();
 		this.movieID = movieID;
 		this.name = name;
 		this.ticketPrice = ticketPrice;
 		this.availableTickets = availableTickets;
 		this.totalTickets = totalTickets;
-	}
-
-	public Movie() {
-		super();
+		this.revenue = revenue;
 	}
 
 	@Override
 	public String toString() {
 		return "Movie [movieID=" + movieID + ", name=" + name + ", ticketPrice=" + ticketPrice + ", availableTickets="
-				+ availableTickets + ", totalTickets=" + totalTickets + "]";
+				+ availableTickets + ", totalTickets=" + totalTickets + ", revenue=" + revenue + "]";
 	}
-	
-	
-	
 	
 	
 }

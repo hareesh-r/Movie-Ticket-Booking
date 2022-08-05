@@ -7,5 +7,9 @@ import com.booking.movie.model.Ticket;
 public interface TicketService {
 	List<Ticket> getAllTickets();
 
-	void bookTickets(int movieID, int userID,int ticketID, int noOfTickets);
+	int bookTickets(int movieID, int userID, int ticketID, int noOfTickets);
+
+	int isAvailable(int movieID);
+
+	int updateMovies(int movieID, int noOfTickets);
 }

@@ -10,21 +10,21 @@ import javax.persistence.Table;
 @Entity
 @Table
 public class Ticket {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int ticketID;
-	
-	@Column(name="movieID")
+
+	@Column(name = "movieID")
 	private int movieID;
-	
-	@Column(name="userID")
+
+	@Column(name = "userID")
 	private int userID;
-	
-	@Column(name="no_of_tickets")
+
+	@Column(name = "no_of_tickets")
 	private int noOfTickets;
-	
-	@Column(name="timestamp")
+
+	@Column(name = "timestamp")
 	private String timestamp;
 
 	public int getTicketID() {
@@ -85,5 +85,5 @@ public class Ticket {
 		return "Ticket [ticketID=" + ticketID + ", movieID=" + movieID + ", userID=" + userID + ", noOfTickets="
 				+ noOfTickets + ", timestamp=" + timestamp + "]";
 	}
-	
+
 }

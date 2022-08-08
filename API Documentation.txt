@@ -55,7 +55,12 @@ Endpoint 3: users/login
 			}
 			
 			Sample Response
-			" "
+			{
+			    "userID": 0,
+			    "username": "invalid",
+			    "password": "invalid",
+			    "role": "user"
+			}
 			
 			
 Endpoint 5: /movies

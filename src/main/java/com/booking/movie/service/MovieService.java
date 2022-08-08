@@ -16,5 +16,4 @@ public interface MovieService {
 
 	void updateMovie(int movieID, String name, int ticketPrice, int availableTickets, int totalTickets);
 
-	
 }

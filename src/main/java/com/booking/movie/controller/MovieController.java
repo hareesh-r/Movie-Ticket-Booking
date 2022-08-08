@@ -4,15 +4,18 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.booking.movie.service.MovieService;
 import com.google.gson.Gson;
 
-@Controller
+@CrossOrigin("http://127.0.0.1:5500/")
+@RestController
 public class MovieController {
 
 	@Autowired
@@ -47,8 +50,10 @@ public class MovieController {
 			int availableTickets = Integer.parseInt(requestParams.get("available_tickets"));
 			int totalTickets = Integer.parseInt(requestParams.get("total_tickets"));
 			movieService.addMovie(movieID, name, ticketPrice, availableTickets, totalTickets);
+			System.out.println(name+" "+movieID+" "+ticketPrice+" "+availableTickets+" "+totalTickets);
 			return "Movie Added Successfully";
 		} catch (Exception e) {
+			e.printStackTrace();
 			return "Movie addition Failed please check for errors";
 		}
 	}

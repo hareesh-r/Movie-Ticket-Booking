@@ -17,7 +17,7 @@ public interface MovieRepository extends JpaRepository<Movie, Integer> {
 	
 	@Modifying
 	@Transactional
-	@Query(value = "insert into movies (movieID, name, ticket_price, available_tickets,total_tickets) values (:movieID, :name, :ticket_price, :available_tickets , :total_tickets)", nativeQuery = true)
+	@Query(value = "insert into movies (movieID, name, ticket_price, available_tickets,total_tickets,revenue) values (:movieID, :name, :ticket_price, :available_tickets , :total_tickets,0)", nativeQuery = true)
 	void addMovie(@Param("movieID") int movieID, @Param("name") String name, @Param("ticket_price") int ticketPrice,@Param("available_tickets") int availableTickets,@Param("total_tickets") int totalTickets);
 
 
